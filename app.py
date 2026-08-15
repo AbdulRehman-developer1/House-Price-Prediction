@@ -224,7 +224,15 @@ def inject_css():
             color: var(--text-primary);
         }
 
-        #MainMenu, footer, header { visibility: hidden; }
+        #MainMenu, footer { visibility: hidden; }
+        header[data-testid="stHeader"] {
+            background: transparent;
+            box-shadow: none;
+        }
+        [data-testid="collapsedControl"] {
+            visibility: visible !important;
+            display: flex !important;
+        }
         .block-container { padding-top: 1.4rem; padding-bottom: 3rem; max-width: 1200px; }
 
         /* ---------- HERO ---------- */
